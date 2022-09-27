@@ -1,0 +1,106 @@
+DDL - DEFINIÇÃO DE DADOS
+    COMANDOS:
+    - CREATE
+    - ALTER
+    - DROP
+
+
+    -- CREATE --
+
+- (CRIANDO O BANCO) -
+
+CREATE DATABASE nomeBancoDeDados;
+
+- !!! Importante !!! -
+Durante a criação do Banco de Dados, a conexão com o mesmo é automatica, mas a partir da segunda vez o usuario deve usar o Comando 'USE nomeBancoDeDados'.
+
+
+- (CRIANDO UMA TABELA) -
+
+CREATE TABLE nome_tabela (
+    coluna1 tipoColuna,
+    coluna2 tipoColuna,
+    coluna3 tipoColuna
+);
+
+
+ - TIPOS DE DADOS -
+
+        Números Exatos  
+
+        bigint
+
+        numeric
+
+        bit
+
+        smallint
+
+        decimal
+
+        smallmoney
+
+        int
+
+        tinyint
+
+        money
+
+        - Numéricos aproximados -
+
+        float
+
+        real
+
+        Data e hora
+        date
+
+        datetimeoffset
+
+        datetime2
+
+        smalldatetime
+
+        datetime
+
+        time
+
+        - Cadeias de caracteres -
+
+        char
+
+        varchar
+
+        text
+
+
+
+- (CRIANDO UMA TABELA A PARTIR DE OUTRA) -
+
+CREATE TABLE nome_nova_tabela AS SELECT * FROM nome_tabela_clone;
+
+
+
+    -- ALTER --
+
+- (ADICIONANDO UMA COLUNA)
+
+ALTER TABLE nome_tabela
+ADD coluna1 tipoColuna;
+
+- (ALTERANDO O TIPO DA COLUNA)
+
+ALTER TABLE nome_tabela
+MODIFY coluna1 tipoColuna;
+
+
+
+    -- DROP --
+
+- (EXCLUINDO UMA TABELA)
+
+DROP TABLE nome_tabela;
+
+- (EXCLUINDO OS DADOS DE UMA TABELA MAS NÃO A TABELA)
+
+TRUNCATE nome_tabela;
